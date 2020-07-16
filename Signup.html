@@ -32,24 +32,30 @@
 		<!-- Banner -->
 			<section id="banner">
 				<div class="inner">
-					<div class="box">
-						<header>Sign In</header><br />
-						<form>
+					<div class="box-signup">
+						<header style="font-size: 60px;">Sign-Up</header>
+						<p style="color:black;">Are you a:</p>
+						<button class="user" id="userbutton" onclick="displayUserSignin(1)">User</button>
+						<button class="business">Business</button>
+						<form class="User-Signup" id="user-signup" style="display:none;">
 							<div class="inputBox">
-								<input type="text" name="" required="" placeholder="Username"/>
+								<input type="text" name="" required="" placeholder="Name" />
 							</div><br />
 							<div class="inputBox">
-								<input type="password" name="" required="" placeholder="Password"/>
+								<input type="text" name="" required="" placeholder="Email Address" />
 							</div><br />
-							<input type="submit" name="" value="Submit" />
-						</form><hr />
-						<div class="Googles-signin">
-							<p>pending</p>
-						</div><hr />
-						<div class="Signup">
-							<p style="color:black; font-size: 20px;">Don't have an account?</p><a href="Signup.html" style="font-size:40px; color: #3498db;">Sign up!</a>
-						</div>
-
+							<div class="inputBox">
+								<input type="text" name="" required="" placeholder="Username" />
+							</div><br />
+							<div class="inputBox">
+								<input type="text" name="" required="" placeholder="Password" />
+							</div><br />
+							<div class="inputBox">
+								<input type="text" name="" required="" placeholder="Confirm Password" />
+							</div><br />
+							<button class="submit">Submit</button>
+						</form>
+						
 					</div>
 				</div>
 			</section>

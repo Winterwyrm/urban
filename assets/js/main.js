@@ -54,6 +54,20 @@
 					side: 'right'
 				});
 
+		//My Code
+		document.getElementById('userbutton').addEventListener('click', function () {
+			document.querySelector('.User-Signup').style.display = 'block';
+		});
+
+
+
+
+
+
+
+
+
+
 		// Header.
 			if (skel.vars.IEVersion < 9)
 				$header.removeClass('alt');
