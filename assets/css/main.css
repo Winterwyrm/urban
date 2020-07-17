@@ -226,6 +226,55 @@
 		padding: 10px;
 	}
 
+	.container_product{
+		max-width: 800px;
+		margin: 0 auto;
+
+	}
+	.tab_trigger{
+
+	}
+	.tab_trigger ul{
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		display: flex;
+
+	}
+	.tab_trigger ul li{
+
+	}
+	.tab_trigger ul li label{
+		position: relative;
+		display: block;
+		padding: 8px 15px;
+		cursor: pointer;
+		min-width: 100px;
+		background: blue;
+		text-align: center;
+		border-radius: 8px 8px 0 0;
+	}
+	.tab_trigger ul li:nth-child(1) label{
+		background: pink;
+	}
+	.tab_trigger ul li:nth-child(2) label{
+		background: red;
+	}
+	.tab_container_wrap{
+
+	}
+	.tab_container_wrap input{
+		position: absolute;
+		width: 0;
+		height: 0;
+		margin: 0;
+		z-index: -100;
+		top: -10000px;
+
+	}
+	.tab_content_box{
+
+	}
 
 
 /* Box Model */
