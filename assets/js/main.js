@@ -53,7 +53,17 @@
 					resetForms: true,
 					side: 'right'
 				});
-
+		$('#menu2')
+			.append('<a href="#menu2" class="close"></a>')
+			.appendTo($body)
+			.panel({
+				delay: 500,
+				hideOnClick: true,
+				hideOnSwipe: true,
+				resetScroll: true,
+				resetForms: true,
+				side: 'right'
+			});
 		//My Code
 		document.getElementById('userbutton').addEventListener('click', function () {
 			document.querySelector('.User-Signup').style.display = 'block';
