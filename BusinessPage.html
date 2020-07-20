@@ -47,32 +47,43 @@
 			<div id="main">
 
 				<!-- Section -->
+				<!-- Section -->
 				<section class="wrapper">
-					<div class="product1page">
-						<h2><span class="image left"><img src="images/pic02.jpg" alt="" /></span>Product Name</h2>
-					</div>
-					<p>Stuff</p>
-					<button>Add to Cart</button>
-
-					<div class="container_product">
-						<div class="tab_trigger">
-							<ul>
-								<li><label for="tab1">Reviews</label></li>
-								<li><label for="tab2">Details</label></li>
-							</ul>
-						</div>
-						<div class="tab_container_wrap">
-							<input type="radio" id="tab1" name="1" />
-							<div class="tab_content_box">
-								<h2>Stuff</h2>
+					<div class="inner">
+						<header><h1>Welcome!</h1></header>
+						<section class="outline">
+							<div class="BusinessInfo">
+								<img src="images/pic05.jpg" />
+								<h2>Business Name</h2>
+								<p>Description</p>
 							</div>
-							<input type="radio" id="tab2" name="1" />
-							<div class="tab_content_box">
-								<h2>Stuff</h2>
-							</div>
-						</div>
+						</section>
+						<div class="controlButton">
+							<button>Add Product</button>
+						</div><br /><br />
+									<div class="itemsoffered">
+										<img src="images/pic05.jpg" />
+										<h3><a herf="Product.html">Item Name</a></h3>
+										<h4>Price</h4>
+										<p>Description</p>
+										<button onclick="togglePopup()" id="remove">Remove</button>
+										<div class="popup" id="popup-1">
+											<div class="popupheader">
+												<div class="popupTitle">
+													Title
+												</div>
+												<button class="close-button">&times;</button>
+											</div>
+											<div class="popupbody">
+												Stuff
+											</div>
+											<div class="overlay"></div>
+										</div>
+									</div>
+						
 					</div>
 				</section>
+				
 
 
 				<!-- Footer -->

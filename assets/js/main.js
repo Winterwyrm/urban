@@ -69,7 +69,10 @@
 			document.querySelector('.User-Signup').style.display = 'block';
 		});
 
-
+		document.getElementById('remove').addEventListener('click', function togglePopup() {
+			document.getElementById("popup-1").classList.toggle("active");
+        });
+		
 
 
 

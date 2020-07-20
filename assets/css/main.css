@@ -270,12 +270,139 @@
 		margin: 0;
 		z-index: -100;
 		top: -10000px;
+		
 
+	}
+	.tab_container_wrap input:checked + .tab_content_box{
+		display: block;
 	}
 	.tab_content_box{
+		background: blue;
+		padding: 20px;
+		display: none;
+	}
+	.tab_content_box:nth-of-type(1){
+		background:blue;
+		
+	}
+	.tab_content_box:nth-of-type(2){
+		background:red;
+		
+	}
+
+	.tab_content_box h2{
+		margin: 0 0 20px;
+	}
+
+	.purchaseButtons{
+
+	}
+	.Continue{
+		position: relative;
+		bottom: 90px;
+	}
+	.buy{
+		position: relative;
+		left: 1000px;
+		bottom: 90px;
+	}
+	.itemstopurchase{
+		position: relative;
+		display: block;
+		
+	}
+
+	.itemstopurchase img{
+		width: 200px;
+		border-bottom: black;
+	}
+	.itemstopurchase h3{
+		position: relative;
+		bottom: 210px;
+		left: 300px;
+	}
+
+	.itemstopurchase h4{
+		position: relative;
+		bottom: 280px;
+		left: 800px;
+	}
+
+	.itemstopurchase button{
+		position: relative;
+		bottom: 410px;
+		left: 1100px;
+	}
+
+	.itemstopurchase p{
+		position: relative;
+		bottom: 280px;
+		left: 300px;
+
+	}
+	.itemsoffered{
+		position: relative;
+		display: block;
+	}
+
+	.itemsoffered img{
+		width: 200px;
+		border-bottom: black;
+	}
+	.itemsoffered h3{
+		position: relative;
+		bottom: 210px;
+		left: 300px;
+	}
+
+	.itemsoffered h4{
+		position: relative;
+		bottom: 280px;
+		left: 800px;
+	}
+
+	.itemsoffered button{
+		position: relative;
+		bottom: 410px;
+		left: 1100px;
+	}
+
+	.itemsoffered p{
+		position: relative;
+		bottom: 280px;
+		left: 300px;
 
 	}
 
+	.BusinessInfo img{
+		width: 300px;
+	}
+
+	.BusinessInfo h2{
+		position: relative;
+		bottom: 325px;
+		left: 400px;
+	}
+	.BusinessInfo p{
+		position: relative;
+		bottom: 325px;
+		left: 400px;
+		font-size: 30px;
+	}
+	.outline{
+		border: 1px dashed black;
+		height: 350px;
+		padding: 25px;
+	}
+
+	.controlButton {
+		position: relative;
+		top: 20px;
+		width: 500px;
+		left: 1550px;
+	}
+
+	
 
 /* Box Model */
 
