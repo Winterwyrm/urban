@@ -53,29 +53,29 @@
 
 	.search-box{
 
-		background-color: none;
-		height: 100px;
+		background-color: white;
+		height: 110px;
 		width: 700px;
-		border-radius: 40px;
-		padding: 25px;
-		margin-left: 100px;
-		font-color: black;
+		border-radius: 5px;
+		margin-left: 250px;
 		border: white;
 		outline: white;
-
+		color: black;
 		
 	}
+
 	.search-btn{
-		color: white;
+		color: black;
 		float: right;
 		width: 100px;
 		height: 100px;
+		border: none;
 		border-radius: 50%;
 		background: none;
 		position: absolute;
 		align-self: center;
-		padding: 40px;
-		margin: -5px 0 0 20px;
+		padding: 25px;
+		margin: 10px 0 0 -90px;
 		
 		
 
@@ -97,11 +97,14 @@
 
 	.wrapper-list{
 		float: left;
-		height: 20px;
+		height: 55px;
+		border-radius: 5px;
 		background: white;
+		width: 175px;
+		
 		position: absolute;
 		align-self: center;
-		padding: 40px;
+		bottom: 25px;
 		margin: -5px 0 0 -250px;
 		border: white;
 		
@@ -200,6 +203,7 @@
 		position: relative;
 		bottom: 45px;
 		right: 175px;
+		color: #3498db;
 		border: white;
 		
 	}
@@ -211,14 +215,38 @@
 		-webkit-appearance: button;
 	}
 
+	.wrapper-list3{
+		float: left;
+		height: 15px;
+		background: none;
+		position: relative;
+		bottom: 90px;
+		left: 500px;
+		color: #3498db;
+		border: white;
+		
+	}
+	.wrapper-list3 select{
+		outline: white;
+		box-shadow: 1px 1px 1px 1px;
+		font-size: 15px;
+		width: 150px;
+		-webkit-appearance: button;
+	}
+
 	.product1{
 		background: none;
 		
+		height: 400px;
 		outline: black;
 	}
 	.product1:hover{
-		background: none;
+		background: rgba(0, 0, 0, 0.5);
 		
+	}
+
+	.product1 img{
+		padding-top: 20px;
 	}
 
 	.productitem{
@@ -402,7 +430,12 @@
 		left: 1550px;
 	}
 
-	
+	.productimage{
+
+	}
+
+
+
 
 /* Box Model */
 
@@ -4248,7 +4281,7 @@
 		-webkit-justify-content: center;
 		-ms-justify-content: center;
 		justify-content: center;
-		background-image: url("../../images/austin.jpg");
+		background-image: url("../../images/Sky2.jpg");
 		background-position: center;
 		background-size: cover;
 		background-repeat: no-repeat;
@@ -4404,6 +4437,360 @@
 		body.is-loading #banner:before {
 			opacity: 1;
 		}
+
+/* Banner2 */
+
+	#banner2 {
+		display: -ms-flexbox;
+		-ms-flex-pack: center;
+		-ms-flex-align: center;
+		padding: 8em 0 6em 0;
+		-moz-align-items: center;
+		-webkit-align-items: center;
+		-ms-align-items: center;
+		align-items: center;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		-moz-justify-content: center;
+		-webkit-justify-content: center;
+		-ms-justify-content: center;
+		justify-content: center;
+		background-image: url("../../images/Sky1.jpg");
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		border-top: 0;
+		min-height: 100vh;
+		height: 100vh !important;
+		position: relative;
+		text-align: center;
+		overflow: hidden;
+	}
+
+		#banner2 .inner {
+			-moz-transform: scale(1.0);
+			-webkit-transform: scale(1.0);
+			-ms-transform: scale(1.0);
+			transform: scale(1.0);
+			-moz-transition: opacity 1s ease, -moz-transform 1s ease;
+			-webkit-transition: opacity 1s ease, -webkit-transform 1s ease;
+			-ms-transition: opacity 1s ease, -ms-transform 1s ease;
+			transition: opacity 1s ease, transform 1s ease;
+			opacity: 1;
+			position: relative;
+			z-index: 2;
+		}
+
+		#banner2 h1 {
+			font-size: 4em;
+			margin-bottom: .25em;
+			color: #FFF;
+		}
+
+		#banner2 p {
+			color: rgba(255, 255, 255, 0.85);
+			font-size: 1.75em;
+		}
+
+	@-moz-keyframes more {
+		0% {
+			bottom: -3em;
+		}
+
+		100% {
+			bottom: 0;
+		}
+	}
+
+	@-webkit-keyframes more {
+		0% {
+			bottom: -3em;
+		}
+
+		100% {
+			bottom: 0;
+		}
+	}
+
+	@-ms-keyframes more {
+		0% {
+			bottom: -3em;
+		}
+
+		100% {
+			bottom: 0;
+		}
+	}
+
+	@keyframes more {
+		0% {
+			bottom: -3em;
+		}
+
+		100% {
+			bottom: 0;
+		}
+	}
+
+		#banner2:before {
+			-moz-transition: opacity 3s ease;
+			-webkit-transition: opacity 3s ease;
+			-ms-transition: opacity 3s ease;
+			transition: opacity 3s ease;
+			-moz-transition-delay: 1.25s;
+			-webkit-transition-delay: 1.25s;
+			-ms-transition-delay: 1.25s;
+			transition-delay: 1.25s;
+			content: '';
+			display: block;
+			background-color: #000;
+			height: 100%;
+			left: 0;
+			opacity: 0.65;
+			position: absolute;
+			top: 0;
+			width: 100%;
+			z-index: 1;
+		}
+
+		@media screen and (max-width: 980px) {
+
+			#banner2 {
+				font-size: .85em;
+			}
+
+				#banner2 br {
+					display: none;
+				}
+
+		}
+
+		@media screen and (max-width: 736px) {
+
+			#banner2 {
+				min-height: 0;
+				padding: 8em 2em 4em 2em;
+			}
+
+				#banner2 .inner {
+					width: 100%;
+				}
+
+				#banner2 h1 {
+					font-size: 1.75em;
+					margin-bottom: 0.5em;
+					padding-bottom: 0;
+				}
+
+				#banner2 p {
+					font-size: 1.25em;
+				}
+
+				#banner2 .button {
+					width: 100%;
+				}
+
+		}
+
+		@media screen and (max-width: 480px) {
+
+			#banner2 p {
+				font-size: 1em;
+			}
+
+		}
+
+		body.is-loading #banner2 .inner {
+			-moz-transform: scale(0.99);
+			-webkit-transform: scale(0.99);
+			-ms-transform: scale(0.99);
+			transform: scale(0.99);
+			opacity: 0;
+		}
+
+		body.is-loading #banner2:before {
+			opacity: 1;
+		}
+
+		/* Banner2 */
+
+	#banner3 {
+		display: -ms-flexbox;
+		-ms-flex-pack: center;
+		-ms-flex-align: center;
+		padding: 8em 0 6em 0;
+		-moz-align-items: center;
+		-webkit-align-items: center;
+		-ms-align-items: center;
+		align-items: center;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		-moz-justify-content: center;
+		-webkit-justify-content: center;
+		-ms-justify-content: center;
+		justify-content: center;
+		background-image: url("../../images/Sky4.jpg");
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		border-top: 0;
+		min-height: 100vh;
+		height: 100vh !important;
+		position: relative;
+		text-align: center;
+		overflow: hidden;
+	}
+
+		#banner3 .inner {
+			-moz-transform: scale(1.0);
+			-webkit-transform: scale(1.0);
+			-ms-transform: scale(1.0);
+			transform: scale(1.0);
+			-moz-transition: opacity 1s ease, -moz-transform 1s ease;
+			-webkit-transition: opacity 1s ease, -webkit-transform 1s ease;
+			-ms-transition: opacity 1s ease, -ms-transform 1s ease;
+			transition: opacity 1s ease, transform 1s ease;
+			opacity: 1;
+			position: relative;
+			z-index: 2;
+		}
+
+		#banner3 h1 {
+			font-size: 4em;
+			margin-bottom: .25em;
+			color: #FFF;
+		}
+
+		#banner3 p {
+			color: rgba(255, 255, 255, 0.85);
+			font-size: 1.75em;
+		}
+
+	@-moz-keyframes more {
+		0% {
+			bottom: -3em;
+		}
+
+		100% {
+			bottom: 0;
+		}
+	}
+
+	@-webkit-keyframes more {
+		0% {
+			bottom: -3em;
+		}
+
+		100% {
+			bottom: 0;
+		}
+	}
+
+	@-ms-keyframes more {
+		0% {
+			bottom: -3em;
+		}
+
+		100% {
+			bottom: 0;
+		}
+	}
+
+	@keyframes more {
+		0% {
+			bottom: -3em;
+		}
+
+		100% {
+			bottom: 0;
+		}
+	}
+
+		#banner3:before {
+			-moz-transition: opacity 3s ease;
+			-webkit-transition: opacity 3s ease;
+			-ms-transition: opacity 3s ease;
+			transition: opacity 3s ease;
+			-moz-transition-delay: 1.25s;
+			-webkit-transition-delay: 1.25s;
+			-ms-transition-delay: 1.25s;
+			transition-delay: 1.25s;
+			content: '';
+			display: block;
+			background-color: #000;
+			height: 100%;
+			left: 0;
+			opacity: 0.65;
+			position: absolute;
+			top: 0;
+			width: 100%;
+			z-index: 1;
+		}
+
+		@media screen and (max-width: 980px) {
+
+			#banner3 {
+				font-size: .85em;
+			}
+
+				#banner3 br {
+					display: none;
+				}
+
+		}
+
+		@media screen and (max-width: 736px) {
+
+			#banner3 {
+				min-height: 0;
+				padding: 8em 2em 4em 2em;
+			}
+
+				#banner3 .inner {
+					width: 100%;
+				}
+
+				#banner3 h1 {
+					font-size: 1.75em;
+					margin-bottom: 0.5em;
+					padding-bottom: 0;
+				}
+
+				#banner2 p {
+					font-size: 1.25em;
+				}
+
+				#banner3 .button {
+					width: 100%;
+				}
+
+		}
+
+		@media screen and (max-width: 480px) {
+
+			#banner3 p {
+				font-size: 1em;
+			}
+
+		}
+
+		body.is-loading #banner3 .inner {
+			-moz-transform: scale(0.99);
+			-webkit-transform: scale(0.99);
+			-ms-transform: scale(0.99);
+			transform: scale(0.99);
+			opacity: 0;
+		}
+
+		body.is-loading #banner3:before {
+			opacity: 1;
+		}
+
+
 
 /* Footer */
 
