@@ -15,19 +15,18 @@
 
 		<!-- Header -->
 		<header id="header">
-			<div class="logo2"><a href="index.html"> Connect<span>ATX</span></a></div>
+			<div class="logo2"><a href="index.php">Connect<span>ATX</span></a></div>
 			<div class="search-boxheader">
 				<input class="search-txt2" type="text" name="" placeholder="Type to search">
 				<a class="search-btn2" href='#'>
 					<i class="fa fa-search" aria-hidden="true"></i>
 				</a>
 				<div class="wrapper-list2">
-
 					<select>
-						<option><a herf="#">All</a></option>
-						<option><a herf="#">Product</a></option>
-						<option><a herf="#">Location</a></option>
-						<option><a herf="#">Business</a></option>
+						<option><a href="#">All</a></option>
+						<option><a href="#">Product</a></option>
+						<option><a href="#">Location</a></option>
+						<option><a href="#">Business</a></option>
 					</select>
 				</div>
 			</div>
@@ -35,11 +34,12 @@
 		</header>
 
 		<!-- Nav -->
-			<nav id="menu">
+			<nav id="menu2">
 				<ul class="links">
-					<li><a href="index.html">Home</a></li>
+					<li><a href="index.php">Home</a></li>
 					<li><a href="generic.html">Generic</a></li>
 					<li><a href="elements.html">Elements</a></li>
+					<?php include 'backend/display_info.php'; ?>
 				</ul>
 			</nav>
 

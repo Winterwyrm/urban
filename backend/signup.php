@@ -6,8 +6,8 @@ function processField(&$conn, &$value) {
 
 function addNewUser(&$conn) {
 
-  $name = processField($conn, $_POST["name"]);
-  $email = processField($conn, $_POST["email"]);
+  $name = $_POST["name"];
+  $email = $_POST["email"];
   $username = processField($conn, $_POST["username"]);
   $pass = processField($conn, $_POST["pass"]);
 

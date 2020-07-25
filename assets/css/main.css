@@ -61,7 +61,7 @@
 		border: white;
 		outline: white;
 		color: black;
-		
+
 	}
 
 	.search-btn{
@@ -76,8 +76,8 @@
 		align-self: center;
 		padding: 25px;
 		margin: 10px 0 0 -90px;
-		
-		
+
+
 
 	}
 
@@ -101,13 +101,13 @@
 		border-radius: 5px;
 		background: white;
 		width: 175px;
-		
+
 		position: absolute;
 		align-self: center;
 		bottom: 25px;
 		margin: -5px 0 0 -250px;
 		border: white;
-		
+
 	}
 	.wrapper-list select{
 		outline: white;
@@ -131,7 +131,7 @@
 	.box .inputBox{
 		position: relative;
 	}
-	
+
 	.box .inputBox input{
 		width: 100%;
 		padding: 10px;
@@ -176,15 +176,13 @@
 
 		background-color: none;
 		height: 100px;
-		width: 700px;
+		width: 400px;
 		border-radius: 40px;
 		position: relative;
 		top: 20px;
-		left: 600px;
+		left: 400px;
 		border: white;
 		outline: white;
-
-		
 	}
 	.search-btn2{
 		color: black;
@@ -194,7 +192,7 @@
 		padding: 40px;
 		bottom: 90px;
 		left: 20px;
-		
+
 	}
 	.wrapper-list2{
 		float: left;
@@ -205,7 +203,7 @@
 		right: 175px;
 		color: #3498db;
 		border: white;
-		
+
 	}
 	.wrapper-list2 select{
 		outline: white;
@@ -224,7 +222,7 @@
 		left: 500px;
 		color: #3498db;
 		border: white;
-		
+
 	}
 	.wrapper-list3 select{
 		outline: white;
@@ -236,13 +234,13 @@
 
 	.product1{
 		background: none;
-		
+
 		height: 400px;
 		outline: black;
 	}
 	.product1:hover{
 		background: rgba(0, 0, 0, 0.5);
-		
+
 	}
 
 	.product1 img{
@@ -298,7 +296,7 @@
 		margin: 0;
 		z-index: -100;
 		top: -10000px;
-		
+
 
 	}
 	.tab_container_wrap input:checked + .tab_content_box{
@@ -311,11 +309,11 @@
 	}
 	.tab_content_box:nth-of-type(1){
 		background:blue;
-		
+
 	}
 	.tab_content_box:nth-of-type(2){
 		background:red;
-		
+
 	}
 
 	.tab_content_box h2{
@@ -337,7 +335,7 @@
 	.itemstopurchase{
 		position: relative;
 		display: block;
-		
+
 	}
 
 	.itemstopurchase img{
@@ -3811,7 +3809,7 @@
 			margin: 0;
 			padding: 0;
 			position: absolute;
-			
+
 		}
 
 			#header > .logo a {
@@ -3873,7 +3871,7 @@
 			#header > a[href="#menu"] {
 				text-decoration: none;
 				-webkit-tap-highlight-color: transparent;
-				
+
 			}
 
 				#header > a[href="#menu"]:before {

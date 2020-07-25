@@ -15,21 +15,21 @@
 
 		<!-- Header -->
 			<header id="header" class="alt">
-				<div class="logo"><a href="index.html">Connect<span>ATX</span></a></div>
+				<div class="logo"><a href="index.php">Connect<span>ATX</span></a></div>
 				<a href="#menu">Menu</a>
 			</header>
 
 		<!-- Nav -->
 			<nav id="menu">
 				<ul class="links">
-					<li><a href="index.html">Home</a></li>
+					<li><a href="index.php">Home</a></li>
 					<li><a href="generic.html">Generic</a></li>
 					<li><a href="elements.html">Elements</a></li>
-					<li><a href="signin.html">Sign In</a></li>
+					<li><a href="signin.php">Sign In</a></li>
 					<li><a href="Product.html">Product Page Ex</a></li>
 					<li><a href="SearchPage ex.html">Search Ex</a></li>
 					<li><a href="BusinessPage.html">Business</a></li>
-					<li><a href="Cart.html">Cart</a></li>
+					<?php include 'backend/display_info.php' ?>
 				</ul>
 			</nav>
 
