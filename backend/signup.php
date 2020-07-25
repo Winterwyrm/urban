@@ -6,8 +6,8 @@ function processField(&$conn, &$value) {
 
 function addNewUser(&$conn) {
 
-  $name = $_POST["name"];
-  $email = $_POST["email"];
+  $name = mysqli_real_escape_string($conn, htmlspecialchars($_POST["name"]));
+  $email = mysqli_real_escape_string($conn, htmlspecialchars($_POST["email"]));
   $username = processField($conn, $_POST["username"]);
   $pass = processField($conn, $_POST["pass"]);
 
@@ -15,6 +15,8 @@ function addNewUser(&$conn) {
   $query = "INSERT INTO users (name, email, username, password) VALUES " . $tuple;
   $data = mysqli_query($conn, $query);
   if ($data) {
+    ini_set('session.gc_maxlifetime', 604800);
+    session_set_cookie_params("3600");
     session_start();
     if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] == true) {
       session_unset();
@@ -24,18 +26,22 @@ function addNewUser(&$conn) {
     $_SESSION["username"] = $_POST["username"];
     $_SESSION["email"] = $_POST["email"];
     $_SESSION["name"]  = $_POST["name"];
+    mysqli_close($conn);
     header('Location: http://localhost:8080');
     exit();
   }
+  mysqli_close($conn);
 }
 
 function trySignUp(&$conn) {
   $username = processField($conn, $_POST["username"]);
   $pass = processField($conn, $_POST["pass"]);
-  $query = mysqli_query($conn, "SELECT * FROM users WHERE username = '" . $username . "' AND " . "password = '" . $pass . "';");
+  $email = mysqli_real_escape_string($conn, $_POST["email"]);
+  $query = mysqli_query($conn, "SELECT * FROM users WHERE username = '" . $username . "' AND " . "password = '" . $pass . "' AND email = '" . $email . "';");
   $row = mysqli_fetch_array($query);
   if ($row != NULL) {
     echo "This user already exists";
+    mysqli_close($conn);
   } else {
     addNewUser($conn);
   }

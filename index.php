@@ -41,19 +41,21 @@
 						<h2 style="color:white; padding-bottom: 20px; border-bottom: 1px solid white;">Slogan</h2>
 					</header>
 					<div class="search-box">
-						<input style="border: 2px solid white;"class="search-txt" type="text" name="" placeholder="Type to search">
-						<a class="search-btn" href='#'>
-							<i class="fa fa-search fa-2x" aria-hidden="true"></i>
-						</a>
-						<div class="wrapper-list">
+						<form id="index-form" action="/search.php" method="post">
+							<input style="border: 2px solid white;"class="search-txt" type="text" name="query" placeholder="Type to search" required>
+							<a class="search-btn" href='#' onclick="submit_form('index-form');">
+								<i class="fa fa-search fa-2x" aria-hidden="true"></i>
+							</a>
+							<div class="wrapper-list">
 
-							<select>
-								<option><a herf="#">All</a></option>
-								<option><a herf="#">Product</a></option>
-								<option><a herf="#">Business</a></option>
+							<select name="category">
+								<option><a href="#">All</a></option>
+								<option><a href="#">Product</a></option>
+								<option><a href="#">Business</a></option>
 							</select>
 
-						</div>
+							</div>
+						</form>
 					</div>
 				</div>
 			</section>
@@ -161,6 +163,7 @@
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="assets/js/submit.js"></script>
 
 	</body>
 </html>

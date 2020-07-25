@@ -17,18 +17,19 @@
 		<header id="header">
 			<div class="logo2"><a href="index.php">Connect<span>ATX</span></a></div>
 			<div class="search-boxheader">
-				<input class="search-txt2" type="text" name="" placeholder="Type to search">
-				<a class="search-btn2" href='#'>
-					<i class="fa fa-search" aria-hidden="true"></i>
-				</a>
+				<form id="search-form" action="/search.php" method="post">
+					<input class="search-txt2" type="text" name="query" placeholder="Type to search" required>
+					<a class="search-btn2" href='#' onclick="submit_form('search-form');">
+						<i class="fa fa-search" aria-hidden="true"></i>
+					</a>
 				<div class="wrapper-list2">
-					<select>
+					<select name="category">
 						<option><a href="#">All</a></option>
 						<option><a href="#">Product</a></option>
-						<option><a href="#">Location</a></option>
 						<option><a href="#">Business</a></option>
 					</select>
 				</div>
+				</form>
 			</div>
 			<a href="#menu2">Menu</a>
 		</header>
@@ -46,93 +47,15 @@
 		<!-- Main -->
 			<div id="main">
 
-				<!-- Section -->
-				<!-- Section -->
 				<section class="wrapper">
 					<div class="inner">
-						<header class="align-center">
-							<h2>Browse Popular Products</h2>
-							<p>Cras sagittis turpis sit amet est tempus, sit amet consectetur purus tincidunt.</p>
-						</header>
 						<div class="flex flex-3">
-							<div class="col align-center">
-								<button class="product1">
-									<a href="product1.html">
-										<img src="images/pic04.jpg" alt="" />
-										<p style="color:black;">Product Name</p>
-									</a>
-								</button>
-							</div>
-							<div class="col align-center">
-								<button class="product1">
-									<a href="product1.html">
-										<img src="images/pic04.jpg" alt="" />
-										<p style="color:black;">Product Name</p>
-									</a>
-								</button>
-							</div>
-							<div class="col align-center">
-								<button class="product1">
-									<a href="product1.html">
-										<img src="images/pic04.jpg" alt="" />
-										<p style="color:black;">Product Name</p>
-									</a>
-								</button>
-							</div>
-
-							<div class="col align-center">
-								<button class="product1">
-									<a href="product1.html">
-										<img src="images/pic04.jpg" alt="" />
-										<p style="color:black;">Product Name</p>
-									</a>
-								</button>
-							</div>
-							<div class="col align-center">
-								<button class="product1">
-									<a href="product1.html">
-										<img src="images/pic04.jpg" alt="" />
-										<p style="color:black;">Product Name</p>
-									</a>
-								</button>
-							</div>
-							<div class="col align-center">
-								<button class="product1">
-									<a href="product1.html">
-										<img src="images/pic04.jpg" alt="" />
-										<p style="color:black;">Product Name</p>
-									</a>
-								</button>
-							</div>
-
-							<div class="col align-center">
-								<button class="product1">
-									<a href="product1.html">
-										<img src="images/pic04.jpg" alt="" />
-										<p style="color:black;">Product Name</p>
-									</a>
-								</button>
-							</div>
-							<div class="col align-center">
-								<button class="product1">
-									<a href="product1.html">
-										<img src="images/pic04.jpg" alt="" />
-										<p style="color:black;">Product Name</p>
-									</a>
-								</button>
-							</div>
-							<div class="col align-center">
-								<button class="product1">
-									<a href="product1.html">
-										<img src="images/pic04.jpg" alt="" />
-										<p style="color:black;">Product Name</p>
-									</a>
-								</button>
-							</div>
+							<?php include 'backend/lookup.php'; ?>
 						</div>
-
 					</div>
 				</section>
+
+				</div>
 
 
 
@@ -156,6 +79,7 @@
 				<script src="assets/js/skel.min.js"></script>
 				<script src="assets/js/util.js"></script>
 				<script src="assets/js/main.js"></script>
+				<script src="assets/js/submit.js"></script>
 
 </body>
 </html>

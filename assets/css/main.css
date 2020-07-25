@@ -3801,6 +3801,10 @@
 		z-index: 10001;
 	}
 
+	#search-form {
+		margin: 0;
+	}
+
 		#header > .logo {
 			display: inline-block;
 			height: inherit;

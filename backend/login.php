@@ -13,6 +13,8 @@ if (isset($_POST['submit'])) {
   $row = mysqli_fetch_array($query);
 
   if ($row != NULL) {
+    ini_set('session.gc_maxlifetime', 604800);
+    session_set_cookie_params("3600");
     session_start();
     if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] == true) {
       session_unset();
@@ -22,11 +24,13 @@ if (isset($_POST['submit'])) {
     $_SESSION["username"] = $row["username"];
     $_SESSION["email"] = $row["email"];
     $_SESSION["name"]  = $row["name"];
-    header("Location: http://localhost:8080/search.html");
+    mysqli_close($conn);
+    header("Location: http://localhost:8080/search.php");
     exit();
   } else {
     echo "Incorrect username or password";
   }
+  mysqli_close($conn);
 }
 
 ?>
