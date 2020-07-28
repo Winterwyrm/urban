@@ -28,7 +28,7 @@
 					<li><a href="signin.php">Sign In</a></li>
 					<li><a href="Product.php">Product Page Ex</a></li>
 					<li><a href="SearchPage ex.php">Search Ex</a></li>
-					<li><a href="BusinessPage.html">Business</a></li>
+					<li><a href="BusinessPage.php">Business</a></li>
 					<?php include 'backend/display_info.php' ?>
 				</ul>
 			</nav>
@@ -38,7 +38,7 @@
 				<div class="inner">
 					<header>
 						<h1>Welcome to Connect<span style="color: #3498db;">ATX</span>!</h1>
-						<h2 style="color:white; padding-bottom: 20px; border-bottom: 1px solid white;">Slogan</h2>
+						<h2 style="color:white; padding-bottom: 20px; border-bottom: 1px solid white;">Featuring the best of Austin businesses</h2>
 					</header>
 					<div class="search-box">
 						<form id="index-form" action="/search.php" method="post">
@@ -68,17 +68,31 @@
 					<div class="inner">
 						<header class="align-center">
 							<h2>Browse Popular Products</h2>
-							<p>Cras sagittis turpis sit amet est tempus, sit amet consectetur purus tincidunt.</p>
+							<p>All from local Austin businesses.</p>
 						</header>
 						<div class="flex flex-3">
-							<div class="col align-center">
-								<div class="image round fit">
-									<img src="images/pic03.jpg" alt="" />
+							<?php
+							$conn = mysqli_connect('localhost', 'root', 'c0nn3ctatx123', 'users');
+							$query = "SELECT * FROM business";
+							$result = mysqli_query($conn, $query);
+
+							for ($i = 0; $i < 6 && $row = mysqli_fetch_array($result); $i++) {
+								$encoded_product = urlencode($row["product"]);
+								$encoded_business = urlencode($row["business"]);
+								echo <<<HERE
+								<div class="col align-center">
+									<br>
+									<div class="image round fit">
+										<img src="{$row["image"]}" width="300px" height="300px" alt="" />
+									</div>
+									<p>{$row["product"]} — \${$row["price"]}</p>
+									<a href="Product.php?product={$encoded_product}&business={$encoded_business}" class="button">Learn More</a>
 								</div>
-								<p>Sed congue elit malesuada nibh, a varius odio vehicula aliquet. Aliquam consequat, nunc quis sollicitudin aliquet. </p>
-								<a href="#" class="button">Learn More</a> <br /><br /><br /><br /><br />
-							</div>
-							<div class="col align-center">
+								HERE;
+							}
+							mysqli_close($conn);
+							?>
+						<!--	<div class="col align-center">
 								<div class="image round fit">
 									<img src="images/pic05.jpg" alt="" />
 								</div>
@@ -135,7 +149,7 @@
 								</div>
 								<p>Sed congue elit malesuada nibh, a varius odio vehicula aliquet. Aliquam consequat, nunc quis sollicitudin aliquet. </p>
 								<a href="#" class="button">Learn More</a>
-							</div>
+							</div>-->
 						</div>
 
 					</div>

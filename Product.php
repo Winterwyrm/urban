@@ -37,7 +37,7 @@
 		<!-- Nav -->
 			<nav id="menu2">
 				<ul class="links">
-					<li><a href="index.html">Home</a></li>
+					<li><a href="index.php">Home</a></li>
 					<li><a href="generic.html">Generic</a></li>
 					<li><a href="elements.html">Elements</a></li>
 					<?php include 'backend/display_info.php'; ?>
@@ -48,21 +48,7 @@
 			<div id="main">
 
 				<!-- Section -->
-				<!-- <?php include 'backend/retrieve_product.php'; ?> -->
-				<section class="wrapper">
-			    <div class="product1page">
-			      <h2><span class="image left"><img src="backend/img/pic01.jpg" alt="" /></span>Test Product</h2>
-			    </div>
-			    <p><b>$23 | by Business</b></p>
-			    <div class="container">
-			      <div class="tab_trigger">
-			        <ul id="product-options">
-			          <li><button id="cart-button" onclick="submit_form('hide');">Add to Cart</button></li>
-			          <br>
-			          <li><p>Description: A good product</p></li>
-			        </ul>
-			      </div>
-					</section>
+				<?php include 'backend/retrieve_product.php'; ?>
 			</div>
 
 				<!-- Scripts -->

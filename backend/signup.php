@@ -11,8 +11,8 @@ function addNewUser(&$conn) {
   $username = processField($conn, $_POST["username"]);
   $pass = processField($conn, $_POST["pass"]);
 
-  $tuple = "('" . $name . "', '" . $email . "', '" . $username . "', '" . $pass . "')";
-  $query = "INSERT INTO users (name, email, username, password) VALUES " . $tuple;
+  $tuple = "('" . $name . "', '" . $email . "', '" . $username . "', '" . $pass . "', '" . $_POST["isbusiness"] . "')";
+  $query = "INSERT INTO users (name, email, username, password, is_business) VALUES " . $tuple;
   $data = mysqli_query($conn, $query);
   if ($data) {
     ini_set('session.gc_maxlifetime', 604800);
@@ -27,8 +27,11 @@ function addNewUser(&$conn) {
     $_SESSION["email"] = $_POST["email"];
     $_SESSION["name"]  = $_POST["name"];
     $_SESSION["cart"] = array();
+    $_SESSION["isbusiness"] = $_POST["isbusiness"];
     mysqli_close($conn);
-    header('Location: http://localhost:8080');
+    if ($_POST["isbusiness"] === "0") {
+      header('Location: http://localhost:8080/cart.php');
+    }
     exit();
   }
   mysqli_close($conn);

@@ -13,11 +13,13 @@ if (isset($_POST["sortby"])) {
     return $a["price"] <=> $b["price"];
   });
   foreach ($product_list as $row) {
+    $encoded_product = urlencode($row["product"]);
+    $encoded_business = urlencode($row["business"]);
     echo <<<DOC
     <div class="col align-center">
       <button class="product1">
-        <a href="Product.php?product={$row["product"]}&business={$row["business"]}">
-          <img src="{$row["image"]}" alt="" />
+        <a href="Product.php?product={$encoded_product}&business={$encoded_business}">
+          <img src="{$row["image"]}" height="200px" width="200px" alt="" />
           <p style="color:black;">{$row["product"]}</p>
         </a>
       </button><br /><br /><br /><br />
@@ -26,11 +28,13 @@ if (isset($_POST["sortby"])) {
   }
 } else {
   while ($row = mysqli_fetch_array($result)) {
+    $encoded_product = urlencode($row["product"]);
+    $encoded_business = urlencode($row["business"]);
     echo <<<DOC
     <div class="col align-center">
       <button class="product1">
-        <a href="Product.php?product={$row["product"]}&business={$row["business"]}">
-          <img src="{$row["image"]}" alt="" />
+        <a href="Product.php?product={$encoded_product}&business={$encoded_business}">
+          <img src="{$row["image"]}" height="200px" width="200px" alt="" />
           <p style="color:black;">{$row["product"]}</p>
         </a>
       </button><br /><br /><br /><br />

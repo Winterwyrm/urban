@@ -35,11 +35,12 @@
 		</header>
 
 		<!-- Nav -->
-			<nav id="menu">
+			<nav id="menu2">
 				<ul class="links">
 					<li><a href="index.html">Home</a></li>
 					<li><a href="generic.html">Generic</a></li>
 					<li><a href="elements.html">Elements</a></li>
+					<?php include 'backend/display_info.php'; ?>
 				</ul>
 			</nav>
 

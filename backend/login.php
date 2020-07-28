@@ -25,6 +25,7 @@ if (isset($_POST['submit'])) {
     $_SESSION["email"] = $row["email"];
     $_SESSION["name"]  = $row["name"];
     $_SESSION["cart"] = array();
+    $_SESSION["isbusiness"] = $row["isbusiness"];
     mysqli_close($conn);
     header("Location: http://localhost:8080/index.php");
     exit();

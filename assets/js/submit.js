@@ -4,12 +4,15 @@ function submit_form(id) {
   }
 }
 
-function process_user(isUser) {
-  if (!isUser) {
-    document.getElementsByName('business')[0].setAttribute('style', 'display: block;')
-    document.getElementsByName('is_business')[0].setAttribute('value', '1');
+function set_business(isBusiness) {
+  if (isBusiness) {
+    document.getElementsByName('name')[0].setAttribute('placeholder', 'Business Name');
+    document.getElementsByName('isbusiness')[0].value = "1";
+    document.getElementById('atoz').setAttribute('type', 'text');
   } else {
-    document.getElementsByName('business')[0].setAttribute('style', 'display: hidden;');
-    document.getElementsByName('is_business')[0].setAttribute('value', '0');
+    document.getElementsByName('isbusiness')[0].value = "0";
+    document.getElementsByName('name')[0].setAttribute('placeholder', 'Name');
+    document.getElementById('atoz').setAttribute('type', 'hidden');
+    console.log(document.getElementById('atoz'));
   }
 }

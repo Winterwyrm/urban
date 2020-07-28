@@ -1,4 +1,8 @@
-﻿<!DOCTYPE HTML>
+<?php
+ini_set('session.gc_maxlifetime', 604800);
+session_set_cookie_params("3600");
+?>
+<!DOCTYPE HTML>
 <!--
 	Urban by TEMPLATED
 	templated.co @templatedco
@@ -15,7 +19,7 @@
 
 		<!-- Header -->
 		<header id="header">
-			<div class="logo2"><a href="index.html"> Connect<span>ATX</span></a></div>
+			<div class="logo2"><a href="index.php"> Connect<span>ATX</span></a></div>
 			<div class="search-boxheader">
 				<form id="search-form" action="/search.php" method="post">
 					<input class="search-txt2" type="text" name="query" placeholder="Type to search" required>
@@ -39,6 +43,7 @@
 					<li><a href="index.php">Home</a></li>
 					<li><a href="generic.html">Generic</a></li>
 					<li><a href="elements.html">Elements</a></li>
+					<?php include 'backend/display_info.php'; ?>
 				</ul>
 			</nav>
 

@@ -49,7 +49,21 @@
 
 		<!-- Main -->
 			<div id="main">
-
+				<br>
+				<br>
+				<header>
+					<br>
+		      <h1>Shopping Cart</h1>
+		      <i style="position: relative; bottom: 80px; left: 350px;"class="fa fa-shopping-cart fa-3x" aria-hidden="true"></i>
+		    </header>
+				<br>
+				<br>
+				<div class="purchaseButtons">
+					<button class="Continue" onclick="window.location.replace('http://localhost:8080');">Continue Shopping</button>
+					<button class="buy">Buy Now!</button>
+				</div>
+				<br>
+				<h2>Items In Cart:</h2><hr />
 				<!-- Section -->
 				<?php include 'backend/cart.php'; ?>
 
