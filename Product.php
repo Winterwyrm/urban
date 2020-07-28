@@ -48,7 +48,21 @@
 			<div id="main">
 
 				<!-- Section -->
-				<?php include 'backend/retrieve_product.php'; ?>
+				<!-- <?php include 'backend/retrieve_product.php'; ?> -->
+				<section class="wrapper">
+			    <div class="product1page">
+			      <h2><span class="image left"><img src="backend/img/pic01.jpg" alt="" /></span>Test Product</h2>
+			    </div>
+			    <p><b>$23 | by Business</b></p>
+			    <div class="container">
+			      <div class="tab_trigger">
+			        <ul id="product-options">
+			          <li><button id="cart-button" onclick="submit_form('hide');">Add to Cart</button></li>
+			          <br>
+			          <li><p>Description: A good product</p></li>
+			        </ul>
+			      </div>
+					</section>
 			</div>
 
 				<!-- Scripts -->
