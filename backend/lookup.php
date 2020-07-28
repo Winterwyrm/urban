@@ -9,12 +9,14 @@ function process_rows(&$res, &$query, &$fields) {
       $needles = explode(" ", strtolower($query));
       foreach ($needles as $needle) {
         if (strpos($haystack, $needle) !== false) {
-          echo "<div class=\"col align-center\">";
-          echo "<button class=\"product1\">";
-          echo "<a href=\"product1.htm\">";
-          echo "<img src=\"" . $row["image"] . "\"/>";
-          echo "<p style=\"color:black;\">" . $row["product"] . "</p></a>";
-          echo "</button></div>";
+          echo <<<HEREDOC
+          <div class="col align-center">
+          <button class="product1">
+          <a href="/Product.php?product={$row["product"]}&business={$row["business"]}">
+          <img src="{$row["image"]}"></img></a>
+          <p id="product-entry" style="color:black">{$row["product"]}&nbsp;&nbsp;|&nbsp;&nbsp;\${$row["price"]}&nbsp;&nbsp;</p></a>
+          </button></div>
+          HEREDOC;
           $count += 1;
           $product_found = true;
           break;

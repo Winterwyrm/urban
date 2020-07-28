@@ -1,8 +1,3 @@
-<?php
-ini_set('session.cache_limiter','public');
-session_cache_limiter(false);
-?>
-
 ﻿<!DOCTYPE HTML>
 <!--
 	Urban by TEMPLATED
@@ -11,16 +6,15 @@ session_cache_limiter(false);
 -->
 <html>
 	<head>
-		<title>Search for Products</title>
+		<title>Your Cart</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 	</head>
 	<body class="subpage">
-
 		<!-- Header -->
 		<header id="header">
-			<div class="logo2"><a href="index.php">Connect<span>ATX</span></a></div>
+			<div class="logo2"><a href="index.php"> Connect<span>ATX</span></a></div>
 			<div class="search-boxheader">
 				<form id="search-form" action="/search.php" method="post">
 					<input class="search-txt2" type="text" name="query" placeholder="Type to search" required>
@@ -47,20 +41,17 @@ session_cache_limiter(false);
 					<?php include 'backend/display_info.php'; ?>
 				</ul>
 			</nav>
+			<?php
+				if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] == false) {
+					header("Location: http://localhost:8080/signin.php");
+				}
+			?>
 
 		<!-- Main -->
 			<div id="main">
 
-				<section class="wrapper">
-					<div class="inner">
-						<div class="flex flex-3">
-							<?php include 'backend/lookup.php'; ?>
-						</div>
-					</div>
-				</section>
-
-				</div>
-
+				<!-- Section -->
+				<?php include 'backend/cart.php'; ?>
 
 
 				<!-- Footer -->

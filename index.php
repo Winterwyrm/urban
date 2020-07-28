@@ -26,8 +26,8 @@
 					<li><a href="generic.html">Generic</a></li>
 					<li><a href="elements.html">Elements</a></li>
 					<li><a href="signin.php">Sign In</a></li>
-					<li><a href="Product.html">Product Page Ex</a></li>
-					<li><a href="SearchPage ex.html">Search Ex</a></li>
+					<li><a href="Product.php">Product Page Ex</a></li>
+					<li><a href="SearchPage ex.php">Search Ex</a></li>
 					<li><a href="BusinessPage.html">Business</a></li>
 					<?php include 'backend/display_info.php' ?>
 				</ul>

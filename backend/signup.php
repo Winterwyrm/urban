@@ -26,6 +26,7 @@ function addNewUser(&$conn) {
     $_SESSION["username"] = $_POST["username"];
     $_SESSION["email"] = $_POST["email"];
     $_SESSION["name"]  = $_POST["name"];
+    $_SESSION["cart"] = array();
     mysqli_close($conn);
     header('Location: http://localhost:8080');
     exit();

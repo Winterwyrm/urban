@@ -1720,6 +1720,20 @@
 
 	}
 
+	#product-entry {
+		font-weight: 900;
+		font-size: 20px;
+	}
+
+	#product-options {
+		display: block;
+	}
+
+	#cart-button {
+		height: 50px;
+		width: 100px;
+	}
+
 	@media screen and (max-width: 480px) {
 
 		.row > * {

@@ -35,11 +35,12 @@
 		</header>
 
 		<!-- Nav -->
-			<nav id="menu">
+			<nav id="menu2">
 				<ul class="links">
 					<li><a href="index.html">Home</a></li>
 					<li><a href="generic.html">Generic</a></li>
 					<li><a href="elements.html">Elements</a></li>
+					<?php include 'backend/display_info.php'; ?>
 				</ul>
 			</nav>
 
@@ -47,46 +48,8 @@
 			<div id="main">
 
 				<!-- Section -->
-				<section class="wrapper">
-					<div class="product1page">
-						<h2><span class="image left"><img src="images/pic02.jpg" alt="" /></span>Product Name</h2>
-					</div>
-					<p>Stuff</p>
-					<button>Add to Cart</button>
-
-					<div class="container">
-						<div class="tab_trigger">
-							<ul>
-								<li><label>Reviews</label></li>
-								<li><label>Details</label></li>
-							</ul>
-						</div>
-						<div class="tab_container_wrap">
-							<input type="radio" name="1" />
-							<div class="tab_content_box">
-								<h2>Stuff</h2>
-							</div>
-							<input type="radio" name="1" />
-							<div class="tab_content_box">
-								<h2>Stuff</h2>
-							</div>
-						</div>
-					</div>
-				</section>
-
-
-				<!-- Footer -->
-				<footer id="footer">
-					<div class="copyright">
-						<ul class="icons">
-							<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-							<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-							<li><a href="#" class="icon fa-snapchat"><span class="label">Snapchat</span></a></li>
-						</ul>
-						<p>&copy; Untitled. All rights reserved. Design: <a href="https://templated.co">TEMPLATED</a>. Images: <a href="https://unsplash.com">Unsplash</a>.</p>
-					</div>
-				</footer>
+				<?php include 'backend/retrieve_product.php'; ?>
+			</div>
 
 				<!-- Scripts -->
 				<script src="assets/js/jquery.min.js"></script>
@@ -95,6 +58,7 @@
 				<script src="assets/js/skel.min.js"></script>
 				<script src="assets/js/util.js"></script>
 				<script src="assets/js/main.js"></script>
+				<script src="assets/js/submit.js"></script>
 
 </body>
 </html>

@@ -24,8 +24,9 @@ if (isset($_POST['submit'])) {
     $_SESSION["username"] = $row["username"];
     $_SESSION["email"] = $row["email"];
     $_SESSION["name"]  = $row["name"];
+    $_SESSION["cart"] = array();
     mysqli_close($conn);
-    header("Location: http://localhost:8080/search.php");
+    header("Location: http://localhost:8080/index.php");
     exit();
   } else {
     echo "Incorrect username or password";
