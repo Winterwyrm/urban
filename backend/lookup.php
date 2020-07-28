@@ -9,12 +9,15 @@ function process_rows(&$res, &$query, &$fields) {
       $needles = explode(" ", strtolower($query));
       foreach ($needles as $needle) {
         if (strpos($haystack, $needle) !== false) {
+          $encoded_product = urlencode($row["product"]);
+          $encoded_business = urlencode($row["business"]);
           echo <<<HEREDOC
           <div class="col align-center">
           <button class="product1">
-          <a href="/Product.php?product={$row["product"]}&business={$row["business"]}">
-          <img src="{$row["image"]}"></img></a>
-          <p id="product-entry" style="color:black">{$row["product"]}&nbsp;&nbsp;|&nbsp;&nbsp;\${$row["price"]}&nbsp;&nbsp;</p></a>
+          <a href="/Product.php?product={$encoded_product}&business={$encoded_business}">
+          <img src="{$row["image"]}" width="200px" height="200px"></img></a>
+          <br>
+          <p style="color:black">{$row["product"]}&nbsp;&nbsp;|&nbsp;&nbsp;\${$row["price"]}&nbsp;&nbsp;</p></a>
           </button></div>
           HEREDOC;
           $count += 1;

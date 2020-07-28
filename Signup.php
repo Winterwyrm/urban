@@ -37,8 +37,8 @@
 			<div class="box-signup">
 				<header style="font-size: 60px;">Sign-Up</header>
 				<p style="color:black;">Are you a:</p>
-				<button class="user" id="userbutton" onclick="displayUserSignin(1)">User</button>
-				<button class="business" id="businessbutton" onclick="displayUserSignin(1)">Business</button>
+				<button class="user" id="userbutton" onclick="set_business(false);">User</button>
+				<button class="business" onclick="set_business(true);">Business</button>
 				<form class="User-Signup" method="post" action="/Signup.php" id="user-signup" style="display:none;">
 					<div class="inputBox">
 						<input type="text" name="name" placeholder="Name" required/>
@@ -55,11 +55,15 @@
 					<div class="inputBox">
 						<input id="confirm_pass" name="confirm" type="password" placeholder="Confirm Password" required/>
 					</div><br/>
+					<div class="inputBox">
+						<input id="atoz" name="verify" type="text" placeholder="Enter Business ID"></input>
+					</div>
+					<input type="hidden" name="isbusiness" value="0"></input>
 					<div><?php include 'backend/signup.php'; ?></div>
 					<br>
 					<input class="submit" type="submit" name="submit" value="Submit"></input>
 				</form>
-				
+
 			</div>
 		</div>
 	</section>
@@ -86,6 +90,7 @@
 	<script src="assets/js/skel.min.js"></script>
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
+	<script src="assets/js/submit.js"></script>
 
 </body>
 </html>

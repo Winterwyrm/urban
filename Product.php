@@ -41,7 +41,7 @@
 					<li><a href="signin.php">Sign In</a></li>
 					<li><a href="SearchPage ex.php">Browse</a></li>
 					<li><a href="Cart.php">Cart Ex</a></li>
-					<li><a href="BusinessPage.html">Business Ex</a></li>
+					<li><a href="BusinessPage.php">Business Ex</a></li>
 					<?php include 'backend/display_info.php' ?>
 				</ul>
 			</nav>
@@ -50,21 +50,7 @@
 			<div id="main">
 
 				<!-- Section -->
-				<!-- <?php include 'backend/retrieve_product.php'; ?> -->
-				<section class="wrapper">
-			    <div class="product1page">
-			      <h2><span class="image left"><img src="backend/img/pic01.jpg" alt="" /></span>Test Product</h2>
-			    </div>
-			    <p><b>$23 | by Business</b></p>
-			    <div class="container">
-			      <div class="tab_trigger">
-			        <ul id="product-options">
-			          <li><button id="cart-button" onclick="submit_form('hide');">Add to Cart</button></li>
-			          <br>
-			          <li><p>Description: A good product</p></li>
-			        </ul>
-			      </div>
-					</section>
+				<?php include 'backend/retrieve_product.php'; ?>
 			</div>
 
 				<!-- Scripts -->
