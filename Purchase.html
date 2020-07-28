@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="/assets/css/main.css"></link>
+</head>
+<body>
+    <div align="center" class="popup" style="border: 2px solid black; background: #3498db; border-radius: 5%; width: 300px; position: absolute; top:150px; left:200px;" ">
+        <p>Enter your purchase infornation:</p>
+        
+        <form class="Purchasepopup" method="post" action="/Cart.php" id="Purchasepopup" style="display:none;">
+            <div class="inputBox">
+                <input type="text" name="Address" placeholder="Address" required />
+            </div><br />
+            <div class="inputBox">
+                <input type="text" name="Zip Code" placeholder="Zip Code" required />
+            </div><br />
+            <div class="inputBox">
+                <input type="text" name="Phone Number" placeholder="Phone Number" required />
+            </div><br />
+            <div class="inputBox">
+                <input type="text" name="Card Number" placeholder="Card Number" required />
+            </div><br />
+           
+            <div><?php include 'backend/Cart.php'; ?></div>
+            <br>
+        </form>    
+
+        <button onclick="window.close();">Submit</button>
+    </div>
+</body>
+</html>

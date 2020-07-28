@@ -23,12 +23,9 @@
 			<nav id="menu">
 				<ul class="links">
 					<li><a href="index.php">Home</a></li>
-					<li><a href="generic.html">Generic</a></li>
-					<li><a href="elements.html">Elements</a></li>
 					<li><a href="signin.php">Sign In</a></li>
-					<li><a href="Product.php">Product Page Ex</a></li>
-					<li><a href="SearchPage ex.php">Search Ex</a></li>
-					<li><a href="BusinessPage.html">Business</a></li>
+					<li><a href="Cart.php">Cart Ex</a></li>
+					<li><a href="BusinessPage.html">Business Ex</a></li>
 					<?php include 'backend/display_info.php' ?>
 				</ul>
 			</nav>

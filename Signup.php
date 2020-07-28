@@ -23,9 +23,9 @@
 	<nav id="menu">
 		<ul class="links">
 			<li><a href="index.php">Home</a></li>
-			<li><a href="generic.html">Generic</a></li>
-			<li><a href="elements.html">Elements</a></li>
 			<li><a href="signin.php">Sign In</a></li>
+			<li><a href="Cart.php">Cart Ex</a></li>
+			<li><a href="BusinessPage.html">Business Ex</a></li>
 			<?php include 'backend/display_info.php' ?>
 		</ul>
 	</nav>
@@ -37,7 +37,7 @@
 				<header style="font-size: 60px;">Sign-Up</header>
 				<p style="color:black;">Are you a:</p>
 				<button class="user" id="userbutton" onclick="displayUserSignin(1)">User</button>
-				<button class="business">Business</button>
+				<button class="business" id="businessbutton" onclick="displayUserSignin(1)">Business</button>
 				<form class="User-Signup" method="post" action="/Signup.php" id="user-signup" style="display:none;">
 					<div class="inputBox">
 						<input type="text" name="name" placeholder="Name" required/>
@@ -58,6 +58,7 @@
 					<br>
 					<input class="submit" type="submit" name="submit" value="Submit"></input>
 				</form>
+				
 			</div>
 		</div>
 	</section>
