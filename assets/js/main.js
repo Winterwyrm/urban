@@ -69,6 +69,8 @@
 			document.querySelector('.User-Signup').style.display = 'block';
 		});
 
+
+
 		function togglePopup() {
 			document.getElementById("popup-1").classList.toggle("active");
 		};

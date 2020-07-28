@@ -37,10 +37,12 @@
 		<!-- Nav -->
 			<nav id="menu2">
 				<ul class="links">
-					<li><a href="index.html">Home</a></li>
-					<li><a href="generic.html">Generic</a></li>
-					<li><a href="elements.html">Elements</a></li>
-					<?php include 'backend/display_info.php'; ?>
+					<li><a href="index.php">Home</a></li>
+					<li><a href="signin.php">Sign In</a></li>
+					<li><a href="Cart.php">Cart Ex</a></li>
+					<li><a href="BusinessPage.php">Business Ex</a></li>
+					<?php include 'backend/display_info.php' ?>
+
 				</ul>
 			</nav>
 
@@ -68,7 +70,7 @@
 										<h4>Price</h4>
 										<p>Description</p>
 										<button id="open" onclick="javascript:void window.open('remove.html','1595942236492','width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');return false;">Remove</button>
-										
+
 
 
 										</div>
