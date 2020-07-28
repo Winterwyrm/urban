@@ -432,6 +432,18 @@
 
 	}
 
+	.popup{
+		border: 2px solid black;
+		background: #3498db;
+		border-radius: 5%;
+		width: 300px;
+
+	}
+
+	.popup p{
+		padding-top: 150px;
+	}
+
 
 
 
