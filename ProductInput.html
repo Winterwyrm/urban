@@ -1,0 +1,101 @@
+﻿<!DOCTYPE HTML>
+<!--
+	Urban by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>Product</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="subpage">
+
+		<!-- Header -->
+		<header id="header">
+			<div class="logo2"><a href="index.php">Connect<span>ATX</span></a></div>
+			<div class="search-boxheader">
+				<input class="search-txt2" type="text" name="" placeholder="Type to search">
+				<a class="search-btn2" href='#'>
+					<i class="fa fa-search" aria-hidden="true"></i>
+				</a>
+				<div class="wrapper-list2">
+
+					<select>
+						<option><a href="#">All</a></option>
+						<option><a href="#">Product</a></option>
+						<option><a href="#">Location</a></option>
+						<option><a href="#">Business</a></option>
+					</select>
+				</div>
+			</div>
+			<a href="#menu2">Menu</a>
+		</header>
+
+		<!-- Nav -->
+			<nav id="menu2">
+				<ul class="links">
+					<<li><a href="index.php">Home</a></li>
+					<li><a href="signin.php">Sign In</a></li>
+					<li><a href="SearchPage ex.php">Browse</a></li>
+					<li><a href="Cart.php">Cart Ex</a></li>
+					<li><a href="BusinessPage.php">Business Ex</a></li>
+					
+				</ul>
+			</nav>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- Section -->
+				<div class="uploadproduct">
+					<input type="file" id="real-file" hidden="hidden" />
+					<button type="button" id="custom-button">Choose a File</button>
+					<span id="custom-text" class="customtxt"> No File Chosen</span>
+					<form>
+						<div class="inputBox">
+							<input type="text" name="Name" placeholder="Product Name" style="width: 200px; padding: 20px; margin-bottom:20px;" required />
+						</div><br />
+						<div class="inputBox">
+							<input type="text" name="Price" placeholder="Product Price" style="width: 200px; padding: 20px; margin-bottom:20px;" required />
+						</div><br />
+						<div class="inputBox">
+							<input type="text" name="Description" placeholder="Product Description" style="width: 500px; height: 300px; margin-bottom:20px;" required />
+						</div><br />
+						<button>Submit</button>
+					</form>
+				</div>
+
+
+			</div>
+
+				<!-- Scripts -->
+				<script src="assets/js/jquery.min.js"></script>
+				<script src="assets/js/jquery.scrolly.min.js"></script>
+				<script src="assets/js/jquery.scrollex.min.js"></script>
+				<script src="assets/js/skel.min.js"></script>
+				<script src="assets/js/util.js"></script>
+				<script src="assets/js/main.js"></script>
+				<script src="assets/js/submit.js"></script>
+				<script>
+                    const realFileBtn = document.getElementById("real-file");
+                    const customBtn = document.getElementById("custom-button");
+                    const customTxt = document.getElementById("custom-text");
+
+                    customBtn.addEventListener("click", function () {
+                        realFileBtn.click();
+                    });
+
+                    realFileBtn.addEventListener("change", function () {
+                        if (realFileBtn.value) {
+                            customTxt.innerHTML = realFileBtn.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1];
+                        } else {
+                            customTxt.innerHTML = "No File Chosen";
+                        }
+                    });
+				</script>
+
+</body>
+</html>
